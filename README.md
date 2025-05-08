@@ -41,16 +41,6 @@ ip=http://localhost:8080/data.json  # dump1090-fa などのJSONデータのURL
 pip install -r requirements.txt
 ```
 
-`requirements.txt` 例：
-
-```
-fastapi
-httpx
-psycopg2-binary
-python-dotenv
-apscheduler
-uvicorn
-```
 
 ### 4. 起動
 
