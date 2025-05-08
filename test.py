@@ -8,12 +8,12 @@ from psycopg2.extras import RealDictCursor
 from dotenv import load_dotenv
 import os
 load_dotenv()
-app = FastAPI()
+
 dbuser = os.getenv("DBUSER")
 dbpassword = os.getenv("DBPASSWORD")
 print(f"DBUSER: {dbuser}")
 print(f"DBPASSWORD: {dbpassword}")
-
+app = FastAPI()
 pg_conn_info = f"dbname=aircraft user={dbuser} password={dbpassword} host=localhost port=5432"
 
 def get_pg_conn():
