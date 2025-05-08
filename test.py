@@ -66,7 +66,7 @@ def insert_to_postgresql(data):
     conn.close()
 
 def put_positions_live():
-    url = "http://106.150.213.148:8080/data/aircraft.json"
+    url = os.getenv("ip")
     try:
         response = httpx.get(url, timeout=5.0)
         response.raise_for_status()
@@ -110,7 +110,7 @@ def root():
 
 @app.get("/positions/live")
 def get_positions_live():
-    url = "http://106.150.213.148:8080/data/aircraft.json"
+    url = os.getenv("ip")
     try:
         response = httpx.get(url, timeout=5.0)
         response.raise_for_status()
